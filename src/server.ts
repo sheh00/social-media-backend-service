@@ -1,13 +1,15 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express, { Application } from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import { connectDB } from './config/database';
 import authRoutes from './routes/authRoutes';
 import postRoutes from './routes/postRoutes';
 
 
 
-dotenv.config();
+
 
 const app: Application = express();
 const PORT = process.env.PORT || 3000;
