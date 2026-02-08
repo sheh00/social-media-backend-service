@@ -2,13 +2,11 @@
   "name": "social-media-backend-service",
   "version": "1.0.0",
   "main": "index.js",
-  
   "scripts": {
-  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-  "build": "tsc",
-  "start": "node dist/server.js"
-},
-
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sheh00/social-media-backend-service.git"
