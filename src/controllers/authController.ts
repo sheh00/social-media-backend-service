@@ -52,11 +52,11 @@ export const signup = async (req: Request, res: Response): Promise<void> => {
     });
 
     // Generate token
-    const token = generateToken(user.user_id, user.user_name, user.email);
+    //const token = generateToken(user.user_id, user.user_name, user.email);
 
     res.status(201).json({
       message: 'User created successfully',
-      token,
+     // token,
       user: {
         user_id: user.user_id,
         first_name: user.first_name,
