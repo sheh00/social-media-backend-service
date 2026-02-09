@@ -1,5 +1,10 @@
 import express from 'express';
 import { authenticate } from '../middleware/authMiddleware';
+import { validatePost } from '../middleware/validationMiddleware';
+
+
+
+
 import {
   createPost,
   getAllPosts,
@@ -18,5 +23,6 @@ router.get('/my-posts', authenticate, getUserPosts);
 router.get('/:id', authenticate, getPostById);
 router.put('/:id', authenticate, updatePost);
 router.delete('/:id', authenticate, deletePost);
-
+router.post('/', authenticate, validatePost, createPost);
+router.put('/:id', authenticate, validatePost, updatePost);
 export default router;
